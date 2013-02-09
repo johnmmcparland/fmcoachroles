@@ -16,42 +16,33 @@
  *
  */
 
-package com.mcparland.john.fmcoachroles.model;
+package com.mcparland.john.fmcoachroles.logic;
 
-import com.mcparland.john.fmcoachroles.logic.NonPlayer;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 /**
- * A calculator for a given role
+ * Test class for {@link NonPlayerImpl}
  * <p>
  * 
  * @copy; John McParland
  *        </p>
  * @author John McParland (john.mcparland@gmail.com)
  */
-public interface Calculator {
+public class NonPlayerImplTest {
 
     /**
-     * Get the name
-     * 
-     * @return the name of the calculator
+     * Test method for
+     * {@link com.mcparland.john.fmcoachroles.logic.NonPlayerImpl#getTacticalKnowledge()}
+     * .
      */
-    public String getName();
-
-    /**
-     * Set the name
-     * 
-     * @param name
-     *            the name of the calculator
-     */
-    public void setName(String name);
-
-    /**
-     * Calculate the proficiency of the nonPlayer
-     * 
-     * @param nonPlayer
-     *            the non-player
-     * @return the proficiency, rated between 0 and 5 with half values permitted
-     */
-    public float calculate(NonPlayer nonPlayer);
+    @Test
+    public void testGetTacticalKnowledge() {
+        final int tacticalKnowledge = 20;
+        NonPlayer nonPlayer = new NonPlayerImpl();
+        nonPlayer.setTacticalKnowledge(tacticalKnowledge);
+        assertEquals(tacticalKnowledge, nonPlayer.getTacticalKnowledge());
+    }
 
 }

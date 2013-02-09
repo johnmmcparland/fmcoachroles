@@ -22,6 +22,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.mcparland.john.fmcoachroles.logic.NonPlayer;
+import com.mcparland.john.fmcoachroles.logic.NonPlayerImpl;
+
 /**
  * Test class for {@link DefendingCalculator}
  * <p>
@@ -43,6 +46,21 @@ public class DefendingCalculatorTest {
         DefendingCalculator calc = new DefendingCalculator();
         calc.setName(name);
         assertEquals(name, calc.getName());
+    }
+
+    /**
+     * Test method for {@link DefendingCalculator#calculate(NonPlayer)}
+     */
+    public void testCalculate() {
+        // Defending * 8 + (Tactical + ddm) * 3
+        Calculator calc = new DefendingCalculator();
+        final NonPlayer nonPlayer = new NonPlayerImpl();
+        nonPlayer.setDefending(1);
+        nonPlayer.setTactical(1);
+        nonPlayer.setDetermination(1);
+        nonPlayer.setLevelOfDiscipline(1);
+        nonPlayer.setMotivating(1);
+        assertEquals(0.5f, calc.calculate(nonPlayer), 0.1f);
     }
 
 }
