@@ -18,40 +18,31 @@
 
 package com.mcparland.john.fmcoachroles.model;
 
-import com.mcparland.john.fmcoachroles.logic.NonPlayer;
+import java.util.Collection;
 
 /**
- * A calculator for a given role
+ * A calculator service
  * <p>
  * 
  * @copy; John McParland
  *        </p>
  * @author John McParland (john.mcparland@gmail.com)
  */
-public interface Calculator {
+public interface CalculatorService {
 
     /**
-     * Get the name
+     * Get the calculators
      * 
-     * @return the name of the calculator
+     * @return the calculators
      */
-    public String getName();
+    public Collection<Calculator> getCalculators();
 
     /**
-     * Set the name
+     * Set the calculators
      * 
-     * @param name
-     *            the name of the calculator
+     * @param calculators
+     *            the calculators
      */
-    public void setName(String name);
-
-    /**
-     * Calculate the proficiency of the nonPlayer
-     * 
-     * @param nonPlayer
-     *            the non-player
-     * @return the proficiency, rated between 0 and 5 with half values permitted
-     */
-    public float calculate(NonPlayer nonPlayer);
+    public void setCalculators(Collection<Calculator> calculators);
 
 }

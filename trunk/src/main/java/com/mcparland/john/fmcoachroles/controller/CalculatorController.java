@@ -18,7 +18,6 @@
 
 package com.mcparland.john.fmcoachroles.controller;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,6 +32,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mcparland.john.fmcoachroles.logic.NonPlayer;
 import com.mcparland.john.fmcoachroles.model.Calculator;
+import com.mcparland.john.fmcoachroles.model.CalculatorService;
 
 /**
  * Controller for the calculator
@@ -47,24 +47,15 @@ import com.mcparland.john.fmcoachroles.model.Calculator;
 public class CalculatorController {
 
     /**
-     * Does it!
-     * 
-     * @return true
-     */
-    public boolean doIt() {
-        return true;
-    }
-
-    /**
      * Logger for this class
      */
     private static final Logger LOGGER = Logger.getLogger(CalculatorController.class);
 
     /**
-     * The calculators
+     * The calculator service
      */
     @Autowired
-    private Collection<Calculator> calculators;
+    private CalculatorService calculatorService = null;
 
     @RequestMapping(value = "/calculate", method = RequestMethod.POST)
     public @ResponseBody
@@ -72,10 +63,31 @@ public class CalculatorController {
         LOGGER.info("Input non-player: " + nonPlayer);
         Map<String, Object> response = new HashMap<String, Object>();
         response.put("success", true);
-        for (Calculator calc : calculators) {
+        for (Calculator calc : calculatorService.getCalculators()) {
+            float rating = calc.calculate(nonPlayer);
+            LOGGER.info("Calculated " + rating + " for " + calc.getName());
             response.put(calc.getName(), calc.calculate(nonPlayer));
         }
         return response;
+    }
+
+    /**
+     * Set the calculator service
+     * 
+     * @param calculatorService
+     *            the calculator service
+     */
+    public void setCalculatorService(CalculatorService calculatorService) {
+        this.calculatorService = calculatorService;
+    }
+
+    /**
+     * Get the calculator service
+     * 
+     * @return the calculator service
+     */
+    public CalculatorService getCalculatorService() {
+        return calculatorService;
     }
 
 }

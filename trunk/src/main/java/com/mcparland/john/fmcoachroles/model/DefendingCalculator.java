@@ -18,6 +18,8 @@
 
 package com.mcparland.john.fmcoachroles.model;
 
+import org.apache.log4j.Logger;
+
 import com.mcparland.john.fmcoachroles.logic.NonPlayer;
 
 /**
@@ -29,6 +31,11 @@ import com.mcparland.john.fmcoachroles.logic.NonPlayer;
  * @author John McParland (john.mcparland@gmail.com)
  */
 public class DefendingCalculator implements Calculator {
+
+    /**
+     * Logger for this class
+     */
+    private static final Logger LOGGER = Logger.getLogger(DefendingCalculator.class);
 
     /**
      * The name
@@ -72,9 +79,35 @@ public class DefendingCalculator implements Calculator {
      * .john.fmcoachroles.logic.NonPlayer)
      */
     @Override
-    public int calculate(NonPlayer nonPlayer) {
-        // TODO Auto-generated method stub
-        return 0;
+    public float calculate(NonPlayer nonPlayer) {
+        LOGGER.debug(getName() + " calculated for non player: " + nonPlayer);
+        // Defending * 8 + (Tactical + ddm) * 3
+        int val = nonPlayer.getDefending()
+                * 8
+                + (nonPlayer.getTactical() + nonPlayer.getDetermination() + nonPlayer.getLevelOfDiscipline() + nonPlayer
+                        .getMotivating()) * 3;
+        LOGGER.debug(getName() + " calculated value: " + val);
+        if (360 <= val) {
+            return 5.0f;
+        } else if (320 <= val) {
+            return 4.5f;
+        } else if (280 <= val) {
+            return 4.0f;
+        } else if (240 <= val) {
+            return 3.5f;
+        } else if (200 <= val) {
+            return 3.0f;
+        } else if (160 <= val) {
+            return 2.5f;
+        } else if (120 <= val) {
+            return 2.0f;
+        } else if (80 <= val) {
+            return 1.5f;
+        } else if (40 <= val) {
+            return 1.0f;
+        } else {
+            return 0.5f;
+        }
     }
 
     /*
