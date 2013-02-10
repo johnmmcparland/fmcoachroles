@@ -22,8 +22,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.mcparland.john.fmcoachroles.logic.INonPlayer;
 import com.mcparland.john.fmcoachroles.logic.NonPlayer;
-import com.mcparland.john.fmcoachroles.logic.NonPlayerImpl;
 
 /**
  * Test class for {@link DefendingCalculator}
@@ -49,12 +49,12 @@ public class DefendingCalculatorTest {
     }
 
     /**
-     * Test method for {@link DefendingCalculator#calculate(NonPlayer)}
+     * Test method for {@link DefendingCalculator#calculate(INonPlayer)}
      */
     public void testCalculate() {
         // Defending * 8 + (Tactical + ddm) * 3
         Calculator calc = new DefendingCalculator();
-        final NonPlayer nonPlayer = new NonPlayerImpl();
+        final INonPlayer nonPlayer = new NonPlayer();
         nonPlayer.setDefending(1);
         nonPlayer.setTactical(1);
         nonPlayer.setDetermination(1);

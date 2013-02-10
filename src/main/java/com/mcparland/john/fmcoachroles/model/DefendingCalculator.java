@@ -20,7 +20,7 @@ package com.mcparland.john.fmcoachroles.model;
 
 import org.apache.log4j.Logger;
 
-import com.mcparland.john.fmcoachroles.logic.NonPlayer;
+import com.mcparland.john.fmcoachroles.logic.INonPlayer;
 
 /**
  * A defensive coach
@@ -79,7 +79,7 @@ public class DefendingCalculator implements Calculator {
      * .john.fmcoachroles.logic.NonPlayer)
      */
     @Override
-    public float calculate(NonPlayer nonPlayer) {
+    public float calculate(INonPlayer nonPlayer) {
         LOGGER.debug(getName() + " calculated for non player: " + nonPlayer);
         // Defending * 8 + (Tactical + ddm) * 3
         int val = nonPlayer.getDefending()

@@ -23,24 +23,24 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * Test class for {@link NonPlayerImpl}
+ * Test class for {@link NonPlayer}
  * <p>
  * 
  * @copy; John McParland
  *        </p>
  * @author John McParland (john.mcparland@gmail.com)
  */
-public class NonPlayerImplTest {
+public class NonPlayerTest {
 
     /**
      * Test method for
-     * {@link com.mcparland.john.fmcoachroles.logic.NonPlayerImpl#getTacticalKnowledge()}
+     * {@link com.mcparland.john.fmcoachroles.logic.NonPlayer#getTacticalKnowledge()}
      * .
      */
     @Test
     public void testGetTacticalKnowledge() {
         final int tacticalKnowledge = 20;
-        NonPlayer nonPlayer = new NonPlayerImpl();
+        INonPlayer nonPlayer = new NonPlayer();
         nonPlayer.setTacticalKnowledge(tacticalKnowledge);
         assertEquals(tacticalKnowledge, nonPlayer.getTacticalKnowledge());
     }

@@ -6,13 +6,13 @@
 	<display-name>Football Manager Coach Roles</display-name>
 
 	<servlet>
-		<servlet-name>fmcoachroles</servlet-name>
+		<servlet-name>FMCoachRoles</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<!-- Maps to view/NonPlayerForm.js -->
-		<servlet-name>fmcoachroles</servlet-name>
+		<servlet-name>FMCoachRoles</servlet-name>
 		<url-pattern>*.form</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
@@ -28,6 +28,6 @@
 	</context-param>
 	<context-param>
 		<param-name>webAppRootKey</param-name>
-		<param-value>fmcoachroles</param-value>
+		<param-value>FMCoachRoles</param-value>
 	</context-param>
 </web-app>

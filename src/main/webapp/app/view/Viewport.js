@@ -1,6 +1,6 @@
 Ext.define('FMCoachRoles.view.Viewport', {
 			extend : 'Ext.container.Viewport',
-			requires : ['FMCoachRoles.view.AuthenticationForm'],
+			requires : ['FMCoachRoles.view.NonPlayerForm'],
 			layout : 'fit',
 			initComponent : function() {
 				this.items = {
