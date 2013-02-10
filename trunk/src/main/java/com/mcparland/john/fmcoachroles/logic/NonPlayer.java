@@ -19,269 +19,479 @@
 package com.mcparland.john.fmcoachroles.logic;
 
 /**
- * A non-player in football manager. The fields directly relate to their
- * attributes in-game.
+ * A non-player in Football Manager
  * <p>
  * 
  * @copy; John McParland
  *        </p>
  * @author John McParland (john.mcparland@gmail.com)
  */
-public interface NonPlayer {
+public class NonPlayer implements INonPlayer {
 
     /**
-     * Get their defending attribute
-     * 
-     * @return defending attribute
+     * Attacking coaching
      */
-    int getDefending();
+    private int attacking = 0;
 
     /**
-     * Set their defending attribute
-     * 
-     * @param defending
-     *            defending attribute
+     * Defending coaching
      */
-    void setDefending(int defending);
+    private int defending = 0;
 
     /**
-     * Set their tactical knowledge attribute
-     * 
-     * @param tacticalKnowledge
-     *            tactical knowledge attribute
+     * Fitness coaching
      */
-    void setTacticalKnowledge(int tacticalKnowledge);
+    private int fitness = 0;
 
     /**
-     * Get their tactical knowledge attribute
-     * 
-     * @return tactical knowledge attribute
+     * Goalkeeper coaching
      */
-    int getTacticalKnowledge();
+    private int goalkeepers = 0;
 
     /**
-     * Set their physiotherapy attribute
-     * 
-     * @param physiotherapy
-     *            physiotherapy attribute
+     * Man Management
      */
-    void setPhysiotherapy(int physiotherapy);
+    private int manManagement = 0;
 
     /**
-     * Get their physiotherapy attribute
-     * 
-     * @return physiotherapy attribute
+     * Mental coaching
      */
-    int getPhysiotherapy();
+    private int mental = 0;
 
     /**
-     * Set their motivating attribute
-     * 
-     * @param motivating
-     *            motivating attribute
+     * Tactical coaching
      */
-    void setMotivating(int motivating);
+    private int tactical = 0;
 
     /**
-     * Get their motivating attribute
-     * 
-     * @return motivating attribute
+     * Technical coaching
      */
-    int getMotivating();
+    private int technical = 0;
 
     /**
-     * Set their level of discipline attribute
-     * 
-     * @param levelOfDiscipline
-     *            levelOfDiscipline attribute
+     * Working with youngsters
      */
-    void setLevelOfDiscipline(int levelOfDiscipline);
+    private int workingWithYoungsters = 0;
 
     /**
-     * Get their level of discipline attribute
-     * 
-     * @return level of discipline attribute
+     * Adaptability
      */
-    int getLevelOfDiscipline();
+    private int adaptability = 0;
 
     /**
-     * Set their judging player potential attribute
-     * 
-     * @param judgingPlayerPotential
-     *            judging player potential attribute
+     * Determination
      */
-    void setJudgingPlayerPotential(int judgingPlayerPotential);
+    private int determination = 0;
 
     /**
-     * Get their judging player potential attribute
-     * 
-     * @return judging player potential attribute
+     * Judging Player Ability
      */
-    int getJudgingPlayerPotential();
+    private int judgingPlayerAbility = 0;
 
     /**
-     * Set their judging player ability attribute
-     * 
-     * @param judgingPlayerAbility
-     *            judging player ability attribute
+     * Judging Player Potential
      */
-    void setJudgingPlayerAbility(int judgingPlayerAbility);
+    private int judgingPlayerPotential = 0;
 
     /**
-     * Get their judging player ability attribute
-     * 
-     * @return judging player ability attribute
+     * Level Of Discipline
      */
-    int getJudgingPlayerAbility();
+    private int levelOfDiscipline = 0;
 
     /**
-     * Set their determination attribute
-     * 
-     * @param determination
-     *            determination attribute
+     * Motivating
      */
-    void setDetermination(int determination);
+    private int motivating = 0;
 
     /**
-     * Get their determination attribute
-     * 
-     * @return determination attribute
+     * Physiotherapy
      */
-    int getDetermination();
+    private int physiotherapy = 0;
 
     /**
-     * Set their adaptability attribute
-     * 
-     * @param adaptability
-     *            adaptability attribute
+     * Tactical knowledge
      */
-    void setAdaptability(int adaptability);
+    private int tacticalKnowledge = 0;
 
     /**
-     * Get their adaptability attribute
-     * 
-     * @return adaptability attribute
+     * Create a NonPlayerImpl
      */
-    int getAdaptability();
+    public NonPlayer() {
 
-    /**
-     * Set their working with youngsters attribute
+    }
+
+    /*
+     * (non-Javadoc)
      * 
-     * @param workingWithYoungsters
-     *            working with youngsters attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getDefending()
      */
-    void setWorkingWithYoungsters(int workingWithYoungsters);
+    @Override
+    public int getDefending() {
+        return defending;
+    }
 
-    /**
-     * Get their working with youngsters attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return working with youngsters attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setDefending(int)
      */
-    int getWorkingWithYoungsters();
+    @Override
+    public void setDefending(int defending) {
+        this.defending = defending;
+    }
 
-    /**
-     * Set their technical attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param technical
-     *            technical attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getAttacking()
      */
-    void setTechnical(int technical);
+    @Override
+    public int getAttacking() {
+        return attacking;
+    }
 
-    /**
-     * Get their technical attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return technical attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setAttacking(int)
      */
-    int getTechnical();
+    @Override
+    public void setAttacking(int attacking) {
+        this.attacking = attacking;
+    }
 
-    /**
-     * Set their tactical attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param tactical
-     *            tactical attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getFitness()
      */
-    void setTactical(int tactical);
+    @Override
+    public int getFitness() {
+        return fitness;
+    }
 
-    /**
-     * Get their tactical attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return tactical attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setFitness(int)
      */
-    int getTactical();
+    @Override
+    public void setFitness(int fitness) {
+        this.fitness = fitness;
+    }
 
-    /**
-     * Set their mental attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param mental
-     *            mental attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getGoalkeepers()
      */
-    void setMental(int mental);
+    @Override
+    public int getGoalkeepers() {
+        return goalkeepers;
+    }
 
-    /**
-     * Get their mental attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return mental attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setGoalkeepers(int)
      */
-    int getMental();
+    @Override
+    public void setGoalkeepers(int goalkeepers) {
+        this.goalkeepers = goalkeepers;
+    }
 
-    /**
-     * Set their man management attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param manManagement
-     *            man management attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getManManagement()
      */
-    void setManManagement(int manManagement);
+    @Override
+    public int getManManagement() {
+        return manManagement;
+    }
 
-    /**
-     * Get their man management attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return man management attribute
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setManManagement(int)
      */
-    int getManManagement();
+    @Override
+    public void setManManagement(int manManagement) {
+        this.manManagement = manManagement;
+    }
 
-    /**
-     * Set their goalkeepers attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param goalkeepers
-     *            goalkeepers attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getMental()
      */
-    void setGoalkeepers(int goalkeepers);
+    @Override
+    public int getMental() {
+        return mental;
+    }
 
-    /**
-     * Get their goalkeepers attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return goalkeepers attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setMental(int)
      */
-    int getGoalkeepers();
+    @Override
+    public void setMental(int mental) {
+        this.mental = mental;
+    }
 
-    /**
-     * Set their fitness attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param fitness
-     *            fitness attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getTactical()
      */
-    void setFitness(int fitness);
+    @Override
+    public int getTactical() {
+        return tactical;
+    }
 
-    /**
-     * Get their fitness attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return fitness attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setTactical(int)
      */
-    int getFitness();
+    @Override
+    public void setTactical(int tactical) {
+        this.tactical = tactical;
+    }
 
-    /**
-     * Set their attacking attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @param attacking
-     *            attacking attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getTechnical()
      */
-    void setAttacking(int attacking);
+    @Override
+    public int getTechnical() {
+        return technical;
+    }
 
-    /**
-     * Get their attacking attribute
+    /*
+     * (non-Javadoc)
      * 
-     * @return attacking attribute
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setTechnical(int)
      */
-    int getAttacking();
+    @Override
+    public void setTechnical(int technical) {
+        this.technical = technical;
+    }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#getWorkingWithYoungsters
+     * ()
+     */
+    @Override
+    public int getWorkingWithYoungsters() {
+        return workingWithYoungsters;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setWorkingWithYoungsters
+     * (int)
+     */
+    @Override
+    public void setWorkingWithYoungsters(int workingWithYoungsters) {
+        this.workingWithYoungsters = workingWithYoungsters;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getAdaptability()
+     */
+    @Override
+    public int getAdaptability() {
+        return adaptability;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setAdaptability(int)
+     */
+    @Override
+    public void setAdaptability(int adaptability) {
+        this.adaptability = adaptability;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getDetermination()
+     */
+    @Override
+    public int getDetermination() {
+        return determination;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setDetermination(int)
+     */
+    @Override
+    public void setDetermination(int determination) {
+        this.determination = determination;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#getJudgingPlayerAbility()
+     */
+    @Override
+    public int getJudgingPlayerAbility() {
+        return judgingPlayerAbility;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setJudgingPlayerAbility
+     * (int)
+     */
+    @Override
+    public void setJudgingPlayerAbility(int judgingPlayerAbility) {
+        this.judgingPlayerAbility = judgingPlayerAbility;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#getJudgingPlayerPotential
+     * ()
+     */
+    @Override
+    public int getJudgingPlayerPotential() {
+        return judgingPlayerPotential;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setJudgingPlayerPotential
+     * (int)
+     */
+    @Override
+    public void setJudgingPlayerPotential(int judgingPlayerPotential) {
+        this.judgingPlayerPotential = judgingPlayerPotential;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#getLevelOfDiscipline()
+     */
+    @Override
+    public int getLevelOfDiscipline() {
+        return levelOfDiscipline;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setLevelOfDiscipline(int)
+     */
+    @Override
+    public void setLevelOfDiscipline(int levelOfDiscipline) {
+        this.levelOfDiscipline = levelOfDiscipline;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getMotivating()
+     */
+    @Override
+    public int getMotivating() {
+        return motivating;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#setMotivating(int)
+     */
+    @Override
+    public void setMotivating(int motivating) {
+        this.motivating = motivating;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.mcparland.john.fmcoachroles.logic.NonPlayer#getPhysiotherapy()
+     */
+    @Override
+    public int getPhysiotherapy() {
+        return physiotherapy;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setPhysiotherapy(int)
+     */
+    @Override
+    public void setPhysiotherapy(int physiotherapy) {
+        this.physiotherapy = physiotherapy;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#getTacticalKnowledge()
+     */
+    @Override
+    public int getTacticalKnowledge() {
+        return tacticalKnowledge;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * com.mcparland.john.fmcoachroles.logic.NonPlayer#setTacticalKnowledge(int)
+     */
+    @Override
+    public void setTacticalKnowledge(int tacticalKnowledge) {
+        this.tacticalKnowledge = tacticalKnowledge;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#toString()
+     */
+    public String toString() {
+        return "Attacking: " + attacking + "\n" + "Defending: " + defending + "\n" + "Fitness: " + fitness + "\n"
+                + "Goalkeepers: " + goalkeepers + "\n" + "Man Management: " + manManagement + "\n" + "Mental: "
+                + mental + "\n" + "Tactical: " + tactical + "\n" + "Technical: " + technical + "\n"
+                + "Working with youngsters: " + workingWithYoungsters + "\n" + "Adaptability: " + adaptability + "\n"
+                + "Determination: " + determination + "\n" + "Judging Player Ability: " + judgingPlayerAbility + "\n"
+                + "Judging Player Potential: " + judgingPlayerPotential + "\n" + "Level of Discipline: "
+                + levelOfDiscipline + "\n" + "Motivating: " + motivating + "\n" + "Physiotherapy: " + physiotherapy
+                + "\n" + "Tactical Knowledge: " + tacticalKnowledge + "\n";
+
+    }
 }

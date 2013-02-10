@@ -18,7 +18,7 @@
 
 package com.mcparland.john.fmcoachroles.model;
 
-import com.mcparland.john.fmcoachroles.logic.NonPlayer;
+import com.mcparland.john.fmcoachroles.logic.INonPlayer;
 
 /**
  * A calculator for a given role
@@ -52,6 +52,6 @@ public interface Calculator {
      *            the non-player
      * @return the proficiency, rated between 0 and 5 with half values permitted
      */
-    public float calculate(NonPlayer nonPlayer);
+    public float calculate(INonPlayer nonPlayer);
 
 }
