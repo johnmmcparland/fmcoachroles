@@ -116,7 +116,7 @@ public class DefendingCalculator implements Calculator {
      * @see java.lang.Object#toString()
      */
     public String toString() {
-        return name;
+        return name + " Calculator";
     }
 
 }
