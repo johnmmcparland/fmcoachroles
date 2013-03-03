@@ -1,4 +1,4 @@
-Ext.define('ChartExample.controller.CalculatorController', {
+Ext.define('FMCoachRoles.controller.CalculatorController', {
     extend : 'Ext.app.Controller',
     init : function() {
         this.control({
@@ -6,11 +6,6 @@ Ext.define('ChartExample.controller.CalculatorController', {
                 click : this.calculate
             }
         });
-    },
-
-    drawChart: function(form) {
-        console.log("In drawChart");
-        console.log("values: "+form.getFieldValues());
     },
 
     calculate : function(button) {
@@ -21,23 +16,21 @@ Ext.define('ChartExample.controller.CalculatorController', {
             Ext.Msg.alert('Invalid Data', 'Please correct form errors.');
         } else { // make sure the form contains valid data before
             console.log("Form is valid: "+form);
-            this.drawChart(form);
             // submitting
-            //form.submit({
+            form.submit({
             // success is based on the "success" property returned by
             // CalculatorController.java
-            //     success : function(form, action) {
-            //         Ext.Msg.alert('Success', action.result.msg);
-            //     },
+			     success : function(form, action) {
+                     Ext.Msg.alert('Success', action.result.msg);
+                 },
             // failure is based on the "success" property returned by
             // AuthenticationController.java
-            //     failure : function(form, action) {
-            //         console.log(action.result);
-            //         var msg = action.result.msg;
-
-            //        Ext.Msg.alert('Failed', msg);
-            //    }
-            //});
+                 failure : function(form, action) {
+                     console.log(action.result);
+                     var msg = action.result.msg;
+                     Ext.Msg.alert('Failed', msg);
+                }
+            });
         }
     }
 });
