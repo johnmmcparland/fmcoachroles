@@ -1,6 +1,6 @@
 Ext.require('Ext.form.field.Number');
 
-Ext.define('ChartExample.view.NonPlayerForm', {
+Ext.define('FMCoachRoles.view.NonPlayerForm', {
     extend : 'Ext.form.Panel',
     alias : 'widget.nonPlayerBox',
     title : 'Non Player',

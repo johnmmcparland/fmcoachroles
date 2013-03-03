@@ -1,15 +1,15 @@
-Ext.define('ChartExample.view.Viewport', {
+Ext.define('FMCoachRoles.view.Viewport', {
     extend : 'Ext.container.Viewport',
     requires : [
-        'ChartExample.view.MyChart',
-        'ChartExample.view.NonPlayerForm'
+        'FMCoachRoles.view.CoachAssignmentChart',
+        'FMCoachRoles.view.NonPlayerForm'
         ],
     layout : 'fit',
 
     initComponent : function() {
         this.items = {
             xtype : 'panel',
-            title : 'Chart Example Form',
+            title : 'FM Coach Roles',
             layout : 'column',
             // This is what's shown in the box
             items : [{
@@ -18,13 +18,7 @@ Ext.define('ChartExample.view.Viewport', {
             },
                 {
                     columnWidth: 0.75,
-                    xtype: 'myChart'
-                   // title: 'chartPanel',
-                    //xtype: 'panel',
-                    //html: 'Chart panel'
-                    //items: [{
-                    //    xtype: 'myChart'
-                    //}]
+                    xtype: 'coachAssignmentChart'
                 }]
         };
         this.callParent();
