@@ -3,7 +3,8 @@
 echo "[INFO] Deploying..."
 
 PROJECT=FMCoachRoles
-DIR=${TOMCAT}/webapps/${PROJECT}
+WEBAPPS=`cygpath ${TOMCAT}/webapps`
+DIR=${WEBAPPS}/${PROJECT}
 WAR=${DIR}.war
 if [[ -f ${WAR} ]];then
     echo "[INFO] Removing WAR"
@@ -16,7 +17,7 @@ if [[ -d ${DIR} ]];then
 fi
 
 echo "[INFO] Deploying WAR"
-cp target/${PROJECT}.war ${TOMCAT}/webapps/
+cp target/${PROJECT}.war ${WEBAPPS}
 echo "[INFO] Done"
 
 echo "[INFO] Remember this is Spring MVC - you can't just go to the root context"

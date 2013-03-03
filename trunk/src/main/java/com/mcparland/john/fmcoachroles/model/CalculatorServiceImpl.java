@@ -18,10 +18,12 @@
 
 package com.mcparland.john.fmcoachroles.model;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.annotation.Resource;
+
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -33,7 +35,7 @@ import org.springframework.stereotype.Repository;
  * @author John McParland (john.mcparland@gmail.com)
  */
 @Repository(value = "calculatorService")
-public class CalculatorServiceImpl implements CalculatorService {
+public class CalculatorServiceImpl implements CalculatorService, InitializingBean {
 
     /**
      * Logger for this class
@@ -41,28 +43,16 @@ public class CalculatorServiceImpl implements CalculatorService {
     private static final Logger LOGGER = Logger.getLogger(CalculatorServiceImpl.class);
 
     /**
-     * Default list of calculators
+     * Calculators
      */
-    private static final Collection<Calculator> DEFAULT_CALCULATORS = new ArrayList<Calculator>();
-
-    /*
-     * Static init block
-     */
-    static {
-        DEFAULT_CALCULATORS.add(new DefendingCalculator());
-    }
-
-    /**
-     * The calculators
-     */
-    private Collection<Calculator> calculators = new ArrayList<Calculator>();
+    @Resource(name = "calculators")
+    private Collection<Calculator> calculators = null;
 
     /**
      * Create the service
      */
     public CalculatorServiceImpl() {
-        calculators = DEFAULT_CALCULATORS;
-        LOGGER.debug(toString());
+
     }
 
     /*
@@ -100,6 +90,17 @@ public class CalculatorServiceImpl implements CalculatorService {
             calcsString += calc.getName() + "\n";
         }
         return calcsString;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
+     */
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        LOGGER.debug(toString());
     }
 
 }

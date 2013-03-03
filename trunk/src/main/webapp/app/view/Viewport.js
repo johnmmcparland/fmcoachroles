@@ -1,23 +1,32 @@
-Ext.define('FMCoachRoles.view.Viewport', {
-			extend : 'Ext.container.Viewport',
-			requires : ['FMCoachRoles.view.NonPlayerForm'],
-			layout : 'fit',
-			initComponent : function() {
-				this.items = {
-					xtype : 'panel',
-					title : 'Football Manager Coach Roles',
-					height : 800,
-					width : '100%',
-					layout : {
-						type : 'hbox',
-						align : 'middle',
-						pack : 'center'
-					},
-					// This is what's shown in the box
-					items : [{
-								xtype : 'nonPlayerBox'
-							}]
-				};
-				this.callParent();
-			}
-		});
+Ext.define('ChartExample.view.Viewport', {
+    extend : 'Ext.container.Viewport',
+    requires : [
+        'ChartExample.view.MyChart',
+        'ChartExample.view.NonPlayerForm'
+        ],
+    layout : 'fit',
+
+    initComponent : function() {
+        this.items = {
+            xtype : 'panel',
+            title : 'Chart Example Form',
+            layout : 'column',
+            // This is what's shown in the box
+            items : [{
+                xtype : 'nonPlayerBox',
+                columnWidth: 0.25
+            },
+                {
+                    columnWidth: 0.75,
+                    xtype: 'myChart'
+                   // title: 'chartPanel',
+                    //xtype: 'panel',
+                    //html: 'Chart panel'
+                    //items: [{
+                    //    xtype: 'myChart'
+                    //}]
+                }]
+        };
+        this.callParent();
+    }
+});

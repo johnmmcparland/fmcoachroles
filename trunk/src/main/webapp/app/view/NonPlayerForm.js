@@ -1,9 +1,12 @@
-Ext.define('FMCoachRoles.view.NonPlayerForm', {
+Ext.require('Ext.form.field.Number');
+
+Ext.define('ChartExample.view.NonPlayerForm', {
     extend : 'Ext.form.Panel',
     alias : 'widget.nonPlayerBox',
     title : 'Non Player',
     width : 400,
     bodyPadding : 5,
+    id: 'nonPlayerForm',
     fieldDefaults : {
         msgTarget : 'side',
         labelWidth : 100
