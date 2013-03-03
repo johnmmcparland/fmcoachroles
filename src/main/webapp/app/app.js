@@ -1,10 +1,12 @@
 Ext.application({
 
-    requires: ['ChartExample.view.MyChart'],
+    requires: ['FMCoachRoles.view.CoachAssignmentChart', 'FMCoachRoles.store.AssignmentStore'],
 
     appFolder: 'app',
     controllers: ['CalculatorController'],
-    name: 'ChartExample',
+    stores: ['AssignmentStore'],
+
+    name: 'FMCoachRoles',
     autoCreateViewport: true,
 
     launch: function() {

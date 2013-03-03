@@ -1,6 +1,6 @@
 Ext.Loader.addClassPathMappings({
   "Ext": "ext/src",
-  "ChartExample": "app",
+  "FMCoachRoles": "app",
   "Ext.ux.GroupTreeChunker": "ext/src/ux/GroupTabPanel.js"
 });Ext.ClassManager.addNameAlternateMappings({
   "Ext.ux.BoxReorderer": [],
@@ -8,7 +8,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.ux.ajax.DataSimlet": [],
   "Ext.ux.grid.TransformGrid": [],
   "Ext.ux.FieldReplicator": [],
-  "ChartExample.controller.Main": [],
+  "FMCoachRoles.controller.Main": [],
   "Ext.ux.grid.filter.ListFilter": [],
   "Ext.ux.ajax.XmlSimlet": [],
   "Ext.ux.event.Driver": [],
@@ -38,7 +38,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.ux.TabReorderer": [],
   "Ext.ux.grid.filter.NumericFilter": [],
   "Ext.ux.grid.menu.RangeMenu": [],
-  "ChartExample.view.Main": [],
+  "FMCoachRoles.view.Main": [],
   "Ext.ux.RowExpander": [],
   "Ext.ux.event.Recorder": [],
   "Ext.ux.event.Player": [],
@@ -46,7 +46,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.ux.grid.filter.BooleanFilter": [],
   "Ext.ux.ToolbarDroppable": [],
   "Ext.ux.event.Maker": [],
-  "ChartExample.view.Viewport": [],
+  "FMCoachRoles.view.Viewport": [],
   "Ext.ux.TabScrollerMenu": [],
   "Ext.ux.IFrame": [],
   "Ext.ux.DataView.Draggable": [],
@@ -70,7 +70,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.ux.ajax.DataSimlet": [],
   "Ext.ux.grid.TransformGrid": [],
   "Ext.ux.FieldReplicator": [],
-  "ChartExample.controller.Main": [],
+  "FMCoachRoles.controller.Main": [],
   "Ext.ux.grid.filter.ListFilter": [
     "gridfilter.list"
   ],
@@ -123,7 +123,7 @@ Ext.Loader.addClassPathMappings({
     "gridfilter.numeric"
   ],
   "Ext.ux.grid.menu.RangeMenu": [],
-  "ChartExample.view.Main": [],
+  "FMCoachRoles.view.Main": [],
   "Ext.ux.RowExpander": [
     "plugin.rowexpander"
   ],
@@ -135,7 +135,7 @@ Ext.Loader.addClassPathMappings({
   ],
   "Ext.ux.ToolbarDroppable": [],
   "Ext.ux.event.Maker": [],
-  "ChartExample.view.Viewport": [],
+  "FMCoachRoles.view.Viewport": [],
   "Ext.ux.TabScrollerMenu": [
     "plugin.tabscrollermenu"
   ],
