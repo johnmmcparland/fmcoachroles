@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2287fcc4-3754-4dc4-913e-27daf66aa2dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/FMCoachRoles-servlet.xml" afterPath="$PROJECT_DIR$/WEB-INF/FMCoachRoles-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/AssignmentStore.js" afterPath="$PROJECT_DIR$/app/store/AssignmentStore.js" />
     </list>
     <ignored path="webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="AssignmentStore.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/store/AssignmentStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="28" selection-start="218" selection-end="218" vertical-scroll-proportion="0.26877472">
+            <state line="5" column="73" selection-start="216" selection-end="216" vertical-scroll-proportion="0.16798419">
               <folding />
             </state>
           </provider>
@@ -70,6 +70,7 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/controller/CalculatorController.js" />
+        <option value="$PROJECT_DIR$/app/store/AssignmentStore.js" />
       </list>
     </option>
   </component>
@@ -316,7 +317,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/AssignmentStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="218" selection-end="218" vertical-scroll-proportion="0.26877472">
+        <state line="5" column="73" selection-start="216" selection-end="216" vertical-scroll-proportion="0.16798419">
           <folding />
         </state>
       </provider>
