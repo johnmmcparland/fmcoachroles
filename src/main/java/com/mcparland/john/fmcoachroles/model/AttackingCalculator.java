@@ -30,12 +30,12 @@ import com.mcparland.john.fmcoachroles.logic.INonPlayer;
  *        </p>
  * @author John McParland (john.mcparland@gmail.com)
  */
-public class AttackingCalulator implements Calculator {
+public class AttackingCalculator implements Calculator {
 
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = Logger.getLogger(AttackingCalulator.class);
+    private static final Logger LOGGER = Logger.getLogger(AttackingCalculator.class);
 
     /**
      * Name of this calculator
