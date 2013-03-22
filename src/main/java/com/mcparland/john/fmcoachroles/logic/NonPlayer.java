@@ -484,14 +484,14 @@ public class NonPlayer implements INonPlayer {
      * @see java.lang.Object#toString()
      */
     public String toString() {
-        return "Attacking: " + attacking + "\n" + "Defending: " + defending + "\n" + "Fitness: " + fitness + "\n"
-                + "Goalkeepers: " + goalkeepers + "\n" + "Man Management: " + manManagement + "\n" + "Mental: "
-                + mental + "\n" + "Tactical: " + tactical + "\n" + "Technical: " + technical + "\n"
-                + "Working with youngsters: " + workingWithYoungsters + "\n" + "Adaptability: " + adaptability + "\n"
-                + "Determination: " + determination + "\n" + "Judging Player Ability: " + judgingPlayerAbility + "\n"
-                + "Judging Player Potential: " + judgingPlayerPotential + "\n" + "Level of Discipline: "
-                + levelOfDiscipline + "\n" + "Motivating: " + motivating + "\n" + "Physiotherapy: " + physiotherapy
-                + "\n" + "Tactical Knowledge: " + tacticalKnowledge + "\n";
+        return "Attacking: " + attacking + " \n" + "Defending: " + defending + " \n" + "Fitness: " + fitness + " \n"
+                + "Goalkeepers: " + goalkeepers + " \n" + "Man Management: " + manManagement + " \n" + "Mental: "
+                + mental + " \n" + "Tactical: " + tactical + " \n" + "Technical: " + technical + " \n"
+                + "Working with youngsters: " + workingWithYoungsters + " \n" + "Adaptability: " + adaptability + " \n"
+                + "Determination: " + determination + " \n" + "Judging Player Ability: " + judgingPlayerAbility + " \n"
+                + "Judging Player Potential: " + judgingPlayerPotential + " \n" + "Level of Discipline: "
+                + levelOfDiscipline + " \n" + "Motivating: " + motivating + " \n" + "Physiotherapy: " + physiotherapy
+                + " \n" + "Tactical Knowledge: " + tacticalKnowledge + " \n";
 
     }
 }
