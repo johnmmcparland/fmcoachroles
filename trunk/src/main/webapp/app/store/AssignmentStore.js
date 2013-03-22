@@ -3,6 +3,7 @@ Ext.define('FMCoachRoles.store.AssignmentStore', {
     model:'FMCoachRoles.model.Assignment',
     autoLoad:true,
 
+    // http://docs.sencha.com/ext-js/4-1/#!/api/Ext.data.Store-event-load
     proxy:{
         type:'ajax',
         api:{
