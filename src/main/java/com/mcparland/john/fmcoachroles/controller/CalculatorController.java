@@ -57,7 +57,60 @@ public class CalculatorController {
     @Autowired
     private CalculatorService calculatorService = null;
 
-    @RequestMapping(value = "/calculate", method = RequestMethod.POST, produces="application/json")
+    /**
+     * Calculate the coach assignment values for the given non-player
+     * 
+     * @param nonPlayer
+     *            the non player to calculate for
+     * @param ses
+     *            the http session
+     * @return JSON response containing the calculated values. Like this
+     * 
+     *         <pre>
+     *     {
+     *     "success":true,
+     *     "assignments":[
+     *         {
+     *             "role":"Attacking",
+     *             "stars":5.0
+     *         },
+     *         {
+     *             "role":"Defending",
+     *             "stars":4.5
+     *         },
+     *         {
+     *             "role":"Tactical",
+     *             "stars":4.0
+     *         },
+     *         {
+     *             "role":"Ball Control",
+     *             "stars":3.5
+     *         },
+     *         {
+     *             "role":"Shooting",
+     *             "stars":3.0
+     *         },
+     *         {
+     *             "role":"Strength",
+     *             "stars":2.5
+     *         },
+     *         {
+     *             "role":"Aerobic",
+     *             "stars":2.0
+     *         },
+     *         {
+     *             "role":"GK - Shot Stopping",
+     *             "stars":1.5
+     *         },
+     *         {
+     *             "role":"GK - Handling",
+     *             "stars":1.0
+     *         }
+     *     ]
+     * }
+     * </pre>
+     */
+    @RequestMapping(value = "/calculate", method = RequestMethod.POST, produces = "application/json")
     public @ResponseBody
     Map<String, Object> calculate(NonPlayer nonPlayer, HttpSession ses) {
         LOGGER.info("Input non-player: " + nonPlayer);
@@ -66,6 +119,8 @@ public class CalculatorController {
         for (Calculator calc : calculatorService.getCalculators()) {
             float rating = calc.calculate(nonPlayer);
             LOGGER.info("Calculated " + rating + " for " + calc.getName());
+            // TODO: Look at
+            // http://www.mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
             response.put(calc.getName(), calc.calculate(nonPlayer));
         }
         return response;
