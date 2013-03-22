@@ -57,7 +57,7 @@ public class CalculatorController {
     @Autowired
     private CalculatorService calculatorService = null;
 
-    @RequestMapping(value = "/calculate", method = RequestMethod.POST)
+    @RequestMapping(value = "/calculate", method = RequestMethod.POST, produces="application/json")
     public @ResponseBody
     Map<String, Object> calculate(NonPlayer nonPlayer, HttpSession ses) {
         LOGGER.info("Input non-player: " + nonPlayer);
