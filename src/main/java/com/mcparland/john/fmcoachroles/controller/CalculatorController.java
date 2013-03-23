@@ -18,7 +18,9 @@
 
 package com.mcparland.john.fmcoachroles.controller;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -114,14 +116,31 @@ public class CalculatorController {
     public @ResponseBody
     Map<String, Object> calculate(NonPlayer nonPlayer, HttpSession ses) {
         LOGGER.info("Input non-player: " + nonPlayer);
-        Map<String, Object> response = new HashMap<String, Object>();
+        Map<String, Object> response = new LinkedHashMap<String, Object>();
         response.put("success", true);
+        List<Recommendation> recommendations = new ArrayList<Recommendation>();
         for (Calculator calc : calculatorService.getCalculators()) {
             float rating = calc.calculate(nonPlayer);
             LOGGER.info("Calculated " + rating + " for " + calc.getName());
             // TODO: Look at
             // http://www.mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
-            response.put(calc.getName(), calc.calculate(nonPlayer));
+            Recommendation rec = new Recommendation(calc.getName(), rating);
+            recommendations.add(rec);
+        }
+        response.put("assignments", recommendations);
+        if (LOGGER.isDebugEnabled()) {
+            StringBuilder str = new StringBuilder();
+            str.append("Returning\n");
+            str.append("success: " + response.get("success") + "\n");
+            @SuppressWarnings("unchecked")
+            List<Recommendation> recs = (List<Recommendation>) response.get("assignments");
+            str.append("assignments: [\n");
+            for (Recommendation rec : recs) {
+                str.append("{\nrole: " + rec.getRole() + "\n");
+                str.append("stars: " + rec.getStars() + "\n}\n");
+            }
+            str.append("]\n");
+            LOGGER.debug(str.toString());
         }
         return response;
     }

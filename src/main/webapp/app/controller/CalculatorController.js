@@ -21,7 +21,11 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
             // success is based on the "success" property returned by
             // CalculatorController.java
 			     success : function(form, action) {
+                     console.log(action);
+                     console.log(action.result);
+                     console.log(action.result.msg);
                      Ext.Msg.alert('Success', action.result.msg);
+
                  },
             // failure is based on the "success" property returned by
             // AuthenticationController.java
