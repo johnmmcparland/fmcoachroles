@@ -21,6 +21,7 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
     extend : 'Ext.app.Controller',
 
     stores: ['AssignmentStore'],
+    views: ['CoachAssignmentChart'], // this doesn't seem to do anything
 
     // Initialize!
     init : function() {
@@ -38,15 +39,16 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
 
         if (form.isValid()) { // make sure the form contains valid data before
             console.log("Form is valid: " + form);
-            form.add
             // submitting
             form.submit({
                 // success is based on the "success" property returned by
                 // CalculatorController.java
+                scope:this,
                 success:function (form, action) {
                     //console.log(action);
                     console.log(action.result);
-                    loadAssignmentsData(action.result);
+                    console.log(this);
+                    this.loadAssignmentsData(action.result);
                     //console.log(action.result.msg);
                     Ext.Msg.alert('Success', 'Look at the recommended assignments');
                 },
@@ -64,6 +66,13 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
     },
 
     loadAssignmentsData: function(result) {
+        console.log("loadAssignmentsData called");
         this.getAssignmentStoreStore().loadData(result);
+        this.getAssignmentStoreStore().datachanged;
+        // var chart = Ext.getCmp('widget.CoachAssignmentChart'); // Seems to return null
+        // chart.redraw(); // Error: 'chart is undefined'
+        //this.getCoachAssignmentChartView().getAssignmentStoreStore().loadAssignmentsData(result); // Isn't happy that getCoachAssignmentCharView() is a chart
+        //this.getCoachAssignmentChartView().redraw(); // Isn't happy that getCoachAssignmentCharView() is a chart
+        console.log("loadAssignmentsData done");
     }
 });
