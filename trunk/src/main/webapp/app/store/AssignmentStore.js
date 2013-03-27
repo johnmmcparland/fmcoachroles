@@ -18,7 +18,8 @@
 Ext.define('FMCoachRoles.store.AssignmentStore', {
     extend:'Ext.data.Store',
     model:'FMCoachRoles.model.Assignment',
-    alias: 'store.assignmentStore',
+    storeId: 'store.assignmentStore',
+
     autoLoad:false,
     // http://docs.sencha.com/ext-js/4-1/#!/api/Ext.data.Store-event-load
     proxy:{

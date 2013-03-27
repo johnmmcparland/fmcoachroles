@@ -17,11 +17,16 @@
  */
 Ext.application({
 
-    requires: ['FMCoachRoles.view.CoachAssignmentChart', 'FMCoachRoles.store.AssignmentStore'],
+    requires: ['FMCoachRoles.view.CoachAssignmentChart',
+               'FMCoachRoles.view.NonPlayerForm',
+               'FMCoachRoles.view.Viewport',
+               'Ext.data.reader.Json'],
 
     appFolder: 'app',
     controllers: ['CalculatorController'],
     stores: ['AssignmentStore'],
+    models: ['Assignment'],
+    views: ['Viewport', 'NonPlayerForm','CoachAssignmentChart'],
 
     name: 'FMCoachRoles',
     autoCreateViewport: true,

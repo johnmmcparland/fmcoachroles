@@ -19,7 +19,7 @@ Ext.require('FMCoachRoles.store.AssignmentStore');
 
 Ext.define('FMCoachRoles.controller.CalculatorController', {
     extend : 'Ext.app.Controller',
-
+    models: ['Assignment'],
     stores: ['AssignmentStore'],
     views: ['CoachAssignmentChart'], // this doesn't seem to do anything
 
@@ -68,7 +68,7 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
     loadAssignmentsData: function(result) {
         console.log("loadAssignmentsData called");
         this.getAssignmentStoreStore().loadData(result);
-        this.getAssignmentStoreStore().datachanged;
+        // this.getAssignmentStoreStore().datachanged;
         // var chart = Ext.getCmp('widget.CoachAssignmentChart'); // Seems to return null
         // chart.redraw(); // Error: 'chart is undefined'
         //this.getCoachAssignmentChartView().getAssignmentStoreStore().loadAssignmentsData(result); // Isn't happy that getCoachAssignmentCharView() is a chart
