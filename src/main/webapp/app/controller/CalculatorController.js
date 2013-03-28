@@ -56,6 +56,7 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
                 // AuthenticationController.java
                 failure:function (form, action) {
                     console.log(action.result);
+                    console.log(action.result.assignments);
                     var msg = action.result.msg;
                     Ext.Msg.alert('Error', 'Sorry there was a problem determining the coach assignments');
                 }
@@ -67,7 +68,7 @@ Ext.define('FMCoachRoles.controller.CalculatorController', {
 
     loadAssignmentsData: function(result) {
         console.log("loadAssignmentsData called");
-        this.getAssignmentStoreStore().loadData(result);
+        this.getAssignmentStoreStore().loadData(result.assignments);
         // this.getAssignmentStoreStore().datachanged;
         // var chart = Ext.getCmp('widget.CoachAssignmentChart'); // Seems to return null
         // chart.redraw(); // Error: 'chart is undefined'

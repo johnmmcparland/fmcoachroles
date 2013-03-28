@@ -15,11 +15,73 @@
  * along with FM Coach Roles.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
+var assignments = [
+            {
+                "role":"Attacking",
+                "stars":5.0
+            },
+            {
+                "role":"Defending",
+                "stars":5.0
+            },
+            {
+                "role":"Tactical",
+                "stars":5.00
+            },
+            {
+                "role":"Ball Control",
+                "stars":5.0
+            },
+            {
+                "role":"Shooting",
+                "stars":5.0
+            },
+            {
+                "role":"Strength",
+                "stars":5.0
+            },
+            {
+                "role":"Aerobic",
+                "stars":5.0
+            },
+            {
+                "role":"GK - Shot Stopping",
+                "stars":5.0
+            },
+            {
+                "role":"GK - Handling",
+                "stars":5.0
+            }
+]
+
 Ext.define('FMCoachRoles.store.AssignmentStore', {
     extend:'Ext.data.Store',
-    model:'FMCoachRoles.model.Assignment',
-    storeId: 'store.assignmentStore',
+    // model:'FMCoachRoles.model.Assignment',
+   // storeId: 'store.assignmentStore',
+    requires: ['FMCoachRoles.model.Assignment'],
 
+    constructor: function(cfg) {
+        cfg = cfg || {};
+        this.callParent([Ext.apply({
+            storeId: 'assignmentStore',
+            model:'FMCoachRoles.model.Assignment',
+            autoLoad:false,
+            data:assignments,
+            proxy: {
+                type: 'ajax',
+                reader: {
+                    type: 'json'
+                }
+            },
+            sorters:[
+                { property:'role'
+                }
+            ]
+        }, cfg)]);
+    }
+
+    /*
     autoLoad:false,
     // http://docs.sencha.com/ext-js/4-1/#!/api/Ext.data.Store-event-load
     proxy:{
@@ -37,4 +99,5 @@ Ext.define('FMCoachRoles.store.AssignmentStore', {
         { property:'role'
         }
     ]
+    */
 });

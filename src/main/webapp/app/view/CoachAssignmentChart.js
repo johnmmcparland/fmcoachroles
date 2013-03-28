@@ -27,6 +27,54 @@ Ext.define('FMCoachRoles.view.CoachAssignmentChart', {
     animate:true,
     store: 'AssignmentStore',
     shadow:true,
+
+    initComponent: function() {
+        Ext.applyIf(this, {
+            axes: [
+                {
+                    type: 'Category',
+                    fields: [
+                        'role'
+                    ],
+                    position: 'bottom'
+                },
+                {
+                    type: 'Numeric',
+                    fields: [
+                        'stars'
+                    ],
+                    position: 'left',
+                    minimum:0.0,
+                    maximum: 5.0
+                }
+            ],
+            series: [
+                {
+                    type: 'column',
+                    label: {
+                        display: 'insideEnd',
+                        field: 'stars',
+                        color: '#333',
+                        'text-anchor': 'middle'
+                    },
+                    xField: 'role',
+                    yField: ['stars'],
+                    tips: {
+                        trackMouse: true,
+                        width: 75,
+                        height: 30,
+                        renderer: function(storeItem, item) {
+                            this.setTitle(storeItem.get('stars') + ' stars');
+                        }
+                    }
+                }
+            ]
+        });
+
+        this.callParent(arguments);
+    }
+    /*
+
     axes:[
         {
             type:'Numeric',
@@ -61,6 +109,5 @@ Ext.define('FMCoachRoles.view.CoachAssignmentChart', {
             }
         }
     ]
-
-})
-;
+    */
+});
