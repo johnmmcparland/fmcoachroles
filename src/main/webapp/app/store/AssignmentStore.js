@@ -19,39 +19,39 @@
 var assignments = [
             {
                 "role":"Attacking",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"Defending",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"Tactical",
-                "stars":5.00
+                "stars":0.50
             },
             {
                 "role":"Ball Control",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"Shooting",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"Strength",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"Aerobic",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"GK - Shot Stopping",
-                "stars":5.0
+                "stars":0.5
             },
             {
                 "role":"GK - Handling",
-                "stars":5.0
+                "stars":0.5
             }
 ]
 
