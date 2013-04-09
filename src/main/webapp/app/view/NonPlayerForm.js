@@ -34,43 +34,34 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 	url : 'calculate.form',
 	items : [ {
 		fieldLabel : 'Attacking',
-		itemCls : 'important',
 		name : 'attacking',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Defending',
-		itemCls : 'important',
 		name : 'defending',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Fitness',
-		itemCls : 'important',
 		name : 'fitness',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Goalkeepers',
-		itemCls : 'important',
 		name : 'goalkeepers',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Man Management',
-		itemCls : 'important',
 		name : 'manManagement',
 		xtype : 'numberfield',
 		value : 1,
@@ -78,31 +69,25 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 		maxValue : 20
 	}, {
 		fieldLabel : 'Mental',
-		itemCls : 'important',
 		name : 'mental',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Tactical',
-		itemCls : 'important',
 		name : 'tactical',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Technical',
-		itemCls : 'important',
 		name : 'technical',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Working With Youngsters',
 		name : 'workingWithYoungsters',
@@ -119,13 +104,11 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 		maxValue : 20
 	}, {
 		fieldLabel : 'Determination',
-		itemCls : 'important',
 		name : 'determination',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Judging Player Ability',
 		name : 'judgingPlayerAbility',
@@ -142,22 +125,18 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 		maxValue : 20
 	}, {
 		fieldLabel : 'Level of Discipline',
-		itemCls : 'important',
 		name : 'levelOfDiscipline',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Motivating',
-		itemCls : 'important',
 		name : 'motivating',
 		xtype : 'numberfield',
 		value : 1,
 		minValue : 1,
-		maxValue : 20,
-		fieldCls : 'important'
+		maxValue : 20
 	}, {
 		fieldLabel : 'Physiotherapy',
 		name : 'physiotherapy',
@@ -172,9 +151,7 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 		value : 1,
 		minValue : 1,
 		maxValue : 20
-	}
-
-	],
+	} ],
 	buttons : [ {
 		text : 'Calculate',
 		action : 'calculate'
