@@ -35,7 +35,7 @@ Ext.define('FMCoachRoles.view.Viewport', {
 				}, 
 				{
 					xtype: 'panel',
-					html: '<p>Formula\'s taken from BonzoLLM on <a href="http://www.thedugout.tv/community/showthread.php?t=61551">The Dugout</a></p>'
+					html: '<p>Formula\'s taken from BonzoLLM on <a target="_blank" href="http://www.thedugout.tv/community/showthread.php?t=61551">The Dugout</a></p>'
 				} ]
 			}, {
 				columnWidth : 0.75,
