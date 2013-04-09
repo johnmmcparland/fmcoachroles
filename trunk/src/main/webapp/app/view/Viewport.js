@@ -16,28 +16,33 @@
  *
  */
 Ext.define('FMCoachRoles.view.Viewport', {
-    extend : 'Ext.container.Viewport',
-    requires : [
-        'FMCoachRoles.view.CoachAssignmentChart',
-        'FMCoachRoles.view.NonPlayerForm'
-        ],
-    layout : 'fit',
+	extend : 'Ext.container.Viewport',
+	requires : [ 'FMCoachRoles.view.CoachAssignmentChart',
+			'FMCoachRoles.view.NonPlayerForm' ],
+	layout : 'fit',
 
-    initComponent : function() {
-        this.items = {
-            xtype : 'panel',
-            title : 'FM Coach Roles',
-            layout : 'column',
-            // This is what's shown in the box
-            items : [{
-                xtype : 'nonPlayerBox',
-                columnWidth: 0.25
-            },
-                {
-                    columnWidth: 0.75,
-                    xtype: 'coachAssignmentChart'
-                }]
-        };
-        this.callParent();
-    }
+	initComponent : function() {
+		this.items = {
+			xtype : 'panel',
+			title : 'FM Coach Roles',
+			layout : 'column',
+			// This is what's shown in the box
+			items : [ {
+				xtype : 'panel',
+			columnWidth : 0.25,
+				items : [ {
+					xtype : 'nonPlayerBox',
+				}, 
+				{
+					xtype: 'panel',
+					html: '<p>Formula\'s taken from BonzoLLM on <a href="http://www.thedugout.tv/community/showthread.php?t=61551">The Dugout</a></p>'
+				} ]
+			}, {
+				columnWidth : 0.75,
+				xtype : 'coachAssignmentChart'
+
+			} ]
+		};
+		this.callParent();
+	}
 });
