@@ -5,4 +5,5 @@
 	<buildpathentry kind="con" path="org.eclipse.dltk.mod.launching.INTERPRETER_CONTAINER"/>
 	<buildpathentry kind="con" path="org.eclipse.vjet.eclipse.core.JSNATIVE_CONTAINER/JS Native Types"/>
 	<buildpathentry kind="con" path="org.eclipse.vjet.eclipse.core.BROWSER_CONTAINER/Browser SDK"/>
+	<buildpathentry combineaccessrules="false" kind="prj" path="/ExtJSTL-4.1"/>
 </buildpath>
