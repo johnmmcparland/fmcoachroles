@@ -1,0 +1,5 @@
+@import url('../../ext/resources/css/ext-all.css');
+.important {
+	font-weight:bold;
+	color:rgb(255,0,0);
+}
