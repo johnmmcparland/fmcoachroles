@@ -21,7 +21,7 @@ Ext.define('FMCoachRoles.view.NonPlayerForm', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.nonPlayerBox',
 	title : 'Non Player',
-	width : 400,
+//	width : 400,
 	bodyPadding : 5,
 	id : 'nonPlayerForm',
 	fieldDefaults : {
