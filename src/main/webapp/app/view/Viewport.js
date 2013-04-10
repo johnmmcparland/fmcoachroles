@@ -24,25 +24,19 @@ Ext.define('FMCoachRoles.view.Viewport', {
 	initComponent : function() {
 		this.items = {
 			xtype : 'panel',
-			title : 'FM Coach Roles',
+		    renderTo: 'fmcoachroles',
+		    title : 'FM Coach Roles',
 			layout : 'column',
 			// This is what's shown in the box
-			items : [ {
-				xtype : 'panel',
-			columnWidth : 0.25,
-				items : [ 
-				{
-					xtype: 'panel',
-					html: '<h1>Find your coaches best assignment</h1><br /><ol><li>Enter their attribute values in the form below</li><li>Press Calculate</li><li>View the chart</li></ol><br /><p>Written by John McParland</p><p>Licenced under LGPLv3</p><br /><p>Formula\'s taken from BonzoLLM on <a target="_blank" href="http://www.thedugout.tv/community/showthread.php?t=61551">The Dugout</a></p>'
-				},{
-					xtype : 'nonPlayerBox'
-				} 
-				 ]
-			}, {
-				columnWidth : 0.75,
-				xtype : 'coachAssignmentChart'
-
-			} ]
+			items : [ 
+			    {
+				xtype : 'nonPlayerBox',
+			    columnWidth : 0.25
+			    }, 
+			    {
+				xtype : 'coachAssignmentChart',
+				columnWidth : 0.75
+			    } ]
 		};
 		this.callParent();
 	}

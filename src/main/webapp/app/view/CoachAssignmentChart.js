@@ -19,95 +19,60 @@ Ext.require('Ext.chart.*');
 Ext.require('FMCoachRoles.store.AssignmentStore');
 
 Ext.define('FMCoachRoles.view.CoachAssignmentChart', {
-    extend:'Ext.chart.Chart',
-    alias:['widget.coachAssignmentChart'],
+	extend : 'Ext.chart.Chart',
+	alias : [ 'widget.coachAssignmentChart' ],
 
-    width:800,
-    height:600,
-    animate:true,
-    store: 'AssignmentStore',
-    shadow:true,
+	width : 800,
+	height : 600,
+	animate : true,
+	store : 'AssignmentStore',
+	shadow : true,
 
-    initComponent: function() {
-        Ext.applyIf(this, {
-            axes: [
-                {
-                    type: 'Category',
-                    fields: [
-                        'role'
-                    ],
-                    position: 'bottom'
-                },
-                {
-                    type: 'Numeric',
-                    fields: [
-                        'stars'
-                    ],
-                    position: 'left',
-                    minimum:0.0,
-                    maximum: 5.0
-                }
-            ],
-            series: [
-                {
-                    type: 'column',
-                    label: {
-                        display: 'insideEnd',
-                        field: 'stars',
-                        color: '#333',
-                        'text-anchor': 'middle'
-                    },
-                    xField: 'role',
-                    yField: ['stars'],
-                    tips: {
-                        trackMouse: true,
-                        width: 75,
-                        height: 30,
-                        renderer: function(storeItem, item) {
-                            this.setTitle(storeItem.get('stars') + ' stars');
-                        }
-                    }
-                }
-            ]
-        });
+	initComponent : function() {
+		Ext.applyIf(this, {
+			axes : [ {
+				type : 'Category',
+				fields : [ 'role' ],
+				position : 'bottom',
+				title : 'Assignment'
+			}, {
+				type : 'Numeric',
+				fields : [ 'stars' ],
+				position : 'left',
+				minimum : 0.0,
+				maximum : 5.0,
+				title : 'Stars'
+			} ],
+			series : [ {
+				type : 'column',
+				label : {
+					display : 'insideEnd',
+					field : 'stars',
+					color : '#333',
+					'text-anchor' : 'middle'
+				},
+				xField : 'role',
+				yField : [ 'stars' ],
+				tips : {
+					trackMouse : true,
+					width : 75,
+					height : 30,
+					renderer : function(storeItem, item) {
+						this.setTitle(storeItem.get('stars') + ' stars');
+					}
+				}
+			} ]
+		});
 
-        this.callParent(arguments);
-    }
-    /*
-
-    axes:[
-        {
-            type:'Numeric',
-            position:'left',
-            fields:['stars'],
-            title:'Stars',
-            grid:true,
-            minimum:0.0,
-            maximum: 5.0
-        },
-        {
-            type:'Category',
-            position:'bottom',
-            fields:['role'],
-            title:'Role'
-        }
-    ],
-    series:[
-        {
-            type:'column',
-            axis:'bottom',
-            highlight:true,
-            xField:'role',
-            yField:'stars',
-            tips: {
-                trackMouse: true,
-                width: 75,
-                height: 30,
-                renderer: function(storeItem, item) {
-                    this.setTitle(storeItem.get('stars') + ' stars');
-                }
-            }
-        }
-    ]
-    */
+		this.callParent(arguments);
+	}
+/*
+ * 
+ * axes:[ { type:'Numeric', position:'left', fields:['stars'], title:'Stars',
+ * grid:true, minimum:0.0, maximum: 5.0 }, { type:'Category', position:'bottom',
+ * fields:['role'], title:'Role' } ], series:[ { type:'column', axis:'bottom',
+ * highlight:true, xField:'role', yField:'stars', tips: { trackMouse: true,
+ * width: 75, height: 30, renderer: function(storeItem, item) {
+ * this.setTitle(storeItem.get('stars') + ' stars'); } } } ]
+ */
 });
