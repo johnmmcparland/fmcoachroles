@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- 
+ * This file is part of FM Coach Roles.
+ * 
+ * FM Coach Roles is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * FM Coach Roles is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with FM Coach Roles.  If not, see <http://www.gnu.org/licenses/>.
+ *
+-->
+
+	<!-- Let it scan for annotations @Controller, @RequestMapping -->
+	<context:component-scan base-package="com.mcparland.john.fmcoachroles"></context:component-scan>
+
+
+	<context:annotation-config></context:annotation-config>
+
+
+	<mvc:annotation-driven></mvc:annotation-driven>
+
+	<util:list id="calculators" list-class="java.util.ArrayList">
+		<bean id="attackingCalculator"
+			class="com.mcparland.john.fmcoachroles.model.AttackingCalculator" />
+		<bean id="defendingCalculator"
+			class="com.mcparland.john.fmcoachroles.model.DefendingCalculator" />
+		<bean id="tacticalCalculator"
+			class="com.mcparland.john.fmcoachroles.model.TacticalCalculator" />
+		<bean id="ballControlCalculator"
+			class="com.mcparland.john.fmcoachroles.model.BallControlCalculator" />
+		<bean id="shootingCalculator"
+			class="com.mcparland.john.fmcoachroles.model.ShootingCalculator" />
+		<bean id="strengthCalculator"
+			class="com.mcparland.john.fmcoachroles.model.FitnessCalculator">
+			<property name="name" value="Strength" />
+		</bean>
+		<bean id="aerobicCalculator"
+			class="com.mcparland.john.fmcoachroles.model.FitnessCalculator">
+			<property name="name" value="Aerobic" />
+		</bean>
+		<bean id="gkShotStoppingCalculator"
+			class="com.mcparland.john.fmcoachroles.model.GoalkeepingCalculator">
+			<property name="name" value="GK - Shot Stopping" />
+		</bean>
+		<bean id="gkHandlingCalculator"
+			class="com.mcparland.john.fmcoachroles.model.GoalkeepingCalculator">
+			<property name="name" value="GK - Handling" />
+		</bean>
+	</util:list>
+
+</beans>
