@@ -31,8 +31,6 @@ if (typeof console === "undefined") {
    console.log("Console exists");
 }
 
-
-
 Ext.application({
 
 	requires : [ 'FMCoachRoles.view.CoachAssignmentChart',
