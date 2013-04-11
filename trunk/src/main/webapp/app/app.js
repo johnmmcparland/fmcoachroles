@@ -15,23 +15,40 @@
  * along with FM Coach Roles.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
+if (typeof console === "undefined") {
+	console = {
+		log : function() {
+		},
+		info : function() {
+		},
+		warn : function() {
+		},
+		error : function() {
+		}
+	};
+} else {
+   console.log("Console exists");
+}
+
+
+
 Ext.application({
 
-    requires: ['FMCoachRoles.view.CoachAssignmentChart',
-               'FMCoachRoles.view.NonPlayerForm',
-               'FMCoachRoles.view.Viewport',
-               'Ext.data.reader.Json'],
+	requires : [ 'FMCoachRoles.view.CoachAssignmentChart',
+			'FMCoachRoles.view.NonPlayerForm', 'FMCoachRoles.view.Viewport',
+			'Ext.data.reader.Json' ],
 
-    appFolder: 'app',
-    controllers: ['CalculatorController'],
-    stores: ['AssignmentStore'],
-    models: ['Assignment'],
-    views: ['Viewport', 'NonPlayerForm','CoachAssignmentChart'],
+	appFolder : 'app',
+	controllers : [ 'CalculatorController' ],
+	stores : [ 'AssignmentStore' ],
+	models : [ 'Assignment' ],
+	views : [ 'Viewport', 'NonPlayerForm', 'CoachAssignmentChart' ],
 
-    name: 'FMCoachRoles',
-    autoCreateViewport: true,
+	name : 'FMCoachRoles',
+	autoCreateViewport : true,
 
-    launch: function() {
-        console.log("Launching " + this.name);
-    }
+	launch : function() {
+		console.log("Launching " + this.name);
+	}
 });
