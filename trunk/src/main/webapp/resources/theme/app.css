@@ -1,4 +1,4 @@
 @import url('../../ext/resources/css/ext-all.css');
 
-ol li   { list-style: decimal }
-ol { list-style: decimal }
+ol li   { list-style: decimal; margin-left: 3px }
+ol { list-style: decimal; margin-left: 3px }
