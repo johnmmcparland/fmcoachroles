@@ -1,11 +1,4 @@
 @import url('../../ext/resources/css/ext-all.css');
 
-.important {
-	font-weight: bold;
-	color: rgb(255, 0, 0);
-}
-
-ol.decimal li   { list-style: decimal }
-ol.decimal > li  { list-style: decimal }
 ol li   { list-style: decimal }
 ol { list-style: decimal }
