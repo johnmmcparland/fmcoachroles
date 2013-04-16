@@ -1,0 +1,41 @@
+{
+    "success":true,
+    "assignments":[
+        {
+            "role":"Attacking",
+            "stars":5.0
+        },
+        {
+            "role":"Defending",
+            "stars":4.5
+        },
+        {
+            "role":"Tactical",
+            "stars":4.0
+        },
+        {
+            "role":"Ball Control",
+            "stars":3.5
+        },
+        {
+            "role":"Shooting",
+            "stars":3.0
+        },
+        {
+            "role":"Strength",
+            "stars":2.5
+        },
+        {
+            "role":"Aerobic",
+            "stars":2.0
+        },
+        {
+            "role":"GK - Shot Stopping",
+            "stars":1.5
+        },
+        {
+            "role":"GK - Handling",
+            "stars":1.0
+        }
+    ]
+}
