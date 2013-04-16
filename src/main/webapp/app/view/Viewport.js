@@ -40,16 +40,18 @@ Ext.define('FMCoachRoles.view.Viewport', {
 			            minSzie: '75',
 			            maxSize: '75',
 			            margins: '5 0 0 0',
-			            html: '<p>Created by John McParland</p><p>Source code licensed under LGPLv3, stored on <a target="_blank" href="http://code.google.com/p/fmcoachroles">Google Code</a></p><p>Formulas courtesy of BonzoLLM at <a target="_blank" href="http://www.thedugout.tv/community/showthread.php?t=61551">The Dugout</a></p>'
+			            //collapsed: true, // this actually doesn't look as nice as I'd hoped
+			            html: '<p>Created by John McParland</p><p>Formulas courtesy of BonzoLLM at <a target="_blank" href="http://www.thedugout.tv/community/showthread.php?t=61551" title="BonzoLLMs post at the dugout">The Dugout</a></p><p>Source code licensed under <a target="_blank" href="http://www.gnu.org/licenses/lgpl-3.0.txt" title="Lesser GNU Public Licence, version 3">LGPLv3</a>, stored on <a target="_blank" href="http://code.google.com/p/fmcoachroles" title="FM Coach Roles on Google Code">Google Code</a></p><p>ExtJS Code licensed under <a target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.txt" title="GNU Public Licence v3">GPLv3</a> by <a target="_blank" href="http://www.sencha.com/products/extjs" title="Sencha">Sencha</a></p>'
 			         },
 			         {
 			        	title: 'Help',
-			        	region: 'west',
+			        	region: 'east',
 			            margins: '5 0 0 0',
 			            cmargins: '5 5 0 0',
 			            width: 320,
 			            minSize: 100,
 			            maxSize: 320,
+			            //collapsed: true, // this actually doesn't look as nice as I'd hoped
 			            html: '<h3>Find a coach/assistant manager\'s best role</h3><br /><ol><li>Enter their attribute values in the Non Player form</li><li>Hit Calculate</li><li>View the results on the chart</li></ol>'
 			         },
 			         {
