@@ -23,7 +23,7 @@
 	<groupId>com.mcparland.john</groupId>
 	<artifactId>fmcoachroles</artifactId>
 	<packaging>war</packaging>
-	<version>0.1.2</version>
+	<version>0.1.4</version>
 
 	<!-- Project description -->
 	<name>FM Coach Roles</name>
