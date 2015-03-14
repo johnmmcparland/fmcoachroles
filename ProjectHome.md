@@ -1,0 +1,1 @@
+FM Coach Roles allows the user to enter the details of any non-players attributes from the game and see how good they are (rated 1-5 stars) at each of the different assignments.
